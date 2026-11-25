@@ -1,0 +1,6 @@
+/build/
+/out/
+/cmake-build-*/
+/compile_commands.json
+/gpu_info.xml
+*.tmp.*

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpu_inventory schema_version="1.0" active_probe="none">
+  <generated_at>2026-11-25T10:43:00Z</generated_at>
+  <locale>en</locale>
+  <program name="gpu-report" version="1.0.0" schema_version="1.0"/>
+  <host>
+    <hostname>NoMacMini</hostname>
+    <kernel>7.3.5-arch1-1</kernel>
+    <architecture>x86_64</architecture>
+    <distribution>Darwin Delta</distribution>
+  </host>
+  <interfaces>
+    <interface name="sysfs" key="diag.interface.sysfs" status="available">
+      <detail>2 display device(s) found</detail>
+    </interface>
+    <interface name="PCI ID database" key="diag.interface.pci_ids" status="available">
+      <detail>/usr/share/hwdata/pci.ids (21619 device entries)</detail>
+    </interface>
+    <interface name="FFmpeg" key="diag.interface.ffmpeg" status="available">
+      <detail>FFmpeg n9.1: 33 encoders, 26 decoders</detail>
+    </interface>
+    <interface name="Vulkan" key="diag.interface.vulkan" status="available">
+      <detail>Intel(R) HD Graphics 4600 (HSW GT2) (0x8086:0x0416); NVIDIA GeForce 840M (0x10de:0x1341); extensions parsed: 294</detail>
+    </interface>
+    <interface name="VA-API" key="diag.interface.vaapi" status="available">
+      <detail>/usr/bin/vainfo</detail>
+    </interface>
+    <interface name="nvidia-smi" key="diag.interface.nvidia_smi" status="available">
+      <detail>NVIDIA GeForce 840M, driver 580.196.07</detail>
+    </interface>
+    <interface name="NVML" key="diag.interface.nvml" status="available">
+      <detail>libnvidia-ml is present</detail>
+    </interface>
+  </interfaces>
+  <gpu>
+    <name>Intel HD Graphics 4600</name>
+    <name_source>Vulkan</name_source>
+    <vendor>Intel</vendor>
+    <vendor_name>Intel Corporation</vendor_name>
+    <pci_device_name>4th Gen Core Processor Integrated Graphics Controller</pci_device_name>
+    <vendor_id>0x8086</vendor_id>
+    <device_id>0x0416</device_id>
+    <driver>i915</driver>
+    <driver_version>7.3.5-arch1-1</driver_version>
+    <driver_version_source>kernel</driver_version_source>
+    <pci_path>0000:00:02.0</pci_path>
+    <adapter_type>integrated</adapter_type>
+    <integrated supported="true"/>
+    <status>detected</status>
+    <vulkan_device>Intel(R) HD Graphics 4600 (HSW GT2)</vulkan_device>
+    <render_nodes>
+      <node>/dev/dri/renderD128</node>
+    </render_nodes>
+    <drm_cards>
+      <card>/dev/dri/card1</card>
+    </drm_cards>
+    <interfaces>
+      <interface name="sysfs" key="diag.interface.sysfs" status="available">
+        <detail>PCI display device at 0000:00:02.0</detail>
+      </interface>
+      <interface name="DRM" key="diag.interface.drm" status="available">
+        <detail>/dev/dri/renderD128, /dev/dri/card1</detail>
+      </interface>
+      <interface name="Vulkan" key="diag.interface.vulkan" status="available">
+        <detail>Intel(R) HD Graphics 4600 (HSW GT2) / Intel open-source Mesa driver Mesa 26.3.1-arch1.3; no Vulkan video extensions advertised</detail>
+      </interface>
+      <interface name="VA-API" key="diag.interface.vaapi" status="available">
+        <detail>/dev/dri/renderD128: Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5</detail>
+      </interface>
+      <interface name="Intel Quick Sync (QSV)" key="diag.interface.qsv" status="available">
+        <detail>av1_qsv, h264_qsv, hevc_qsv, mjpeg_qsv, mpeg2_qsv, vp9_qsv</detail>
+      </interface>
+      <interface name="FFmpeg" key="diag.interface.ffmpeg" status="available">
+        <detail>av1_qsv, av1_vaapi, h264_qsv, h264_vaapi, hevc_qsv, hevc_vaapi, mjpeg_qsv, mjpeg_vaapi, mpeg2_qsv, mpeg2_vaapi, vp8_vaapi, vp9_qsv, vp9_vaapi</detail>
+      </interface>
+    </interfaces>
+    <capabilities>
+      <codec name="H.264/AVC">
+        <decode supported="true"/>
+        <encode supported="true"/>
+        <profiles>
+          <profile>Constrained Baseline</profile>
+          <profile>High</profile>
+          <profile>Main</profile>
+          <profile>Multiview High</profile>
+          <profile>Stereo High</profile>
+        </profiles>
+        <bit_depths>
+          <bit_depth>8</bit_depth>
+        </bit_depths>
+        <sources>
+          <decode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="HEVC/H.265">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="VP8">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="VP9">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="AV1">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="MPEG-2">
+        <decode supported="true"/>
+        <encode supported="true"/>
+        <profiles>
+          <profile>Main</profile>
+          <profile>Simple</profile>
+        </profiles>
+        <bit_depths>
+          <bit_depth>8</bit_depth>
+        </bit_depths>
+        <sources>
+          <decode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="VC-1">
+        <decode supported="true"/>
+        <encode supported="false"/>
+        <profiles>
+          <profile>Advanced</profile>
+          <profile>Main</profile>
+          <profile>Simple</profile>
+        </profiles>
+        <bit_depths>
+          <bit_depth>8</bit_depth>
+        </bit_depths>
+        <sources>
+          <decode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="JPEG/MJPEG">
+        <decode supported="true"/>
+        <encode supported="false"/>
+        <profiles>
+          <profile>Baseline</profile>
+        </profiles>
+        <bit_depths>
+          <bit_depth>8</bit_depth>
+        </bit_depths>
+        <sources>
+          <decode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>VA-API (vainfo, /dev/dri/renderD128, Driver version: Intel i965 driver for Intel(R) Haswell Mobile - 2.4.5)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+    </capabilities>
+    <hw_encoders>
+      <encoder name="h264_vaapi" api="VA-API" codec="H.264/AVC" available_in_ffmpeg="true"/>
+      <encoder name="h264_qsv" api="QSV" codec="H.264/AVC" available_in_ffmpeg="true">
+        <pixel_formats source="ffmpeg_build" per_gpu_verified="false">
+          <pixel_format>nv12</pixel_format>
+        </pixel_formats>
+      </encoder>
+      <encoder name="mpeg2_vaapi" api="VA-API" codec="MPEG-2" available_in_ffmpeg="true"/>
+      <encoder name="mpeg2_qsv" api="QSV" codec="MPEG-2" available_in_ffmpeg="true">
+        <pixel_formats source="ffmpeg_build" per_gpu_verified="false">
+          <pixel_format>nv12</pixel_format>
+        </pixel_formats>
+      </encoder>
+    </hw_encoders>
+    <hw_decoders>
+      <decoder name="h264_qsv" api="QSV" codec="H.264/AVC" available_in_ffmpeg="true"/>
+      <decoder name="vaapi" api="VA-API" codec="H.264/AVC" available_in_ffmpeg="true"/>
+      <decoder name="mpeg2_qsv" api="QSV" codec="MPEG-2" available_in_ffmpeg="true"/>
+      <decoder name="vaapi" api="VA-API" codec="MPEG-2" available_in_ffmpeg="true"/>
+      <decoder name="vc1_qsv" api="QSV" codec="VC-1" available_in_ffmpeg="true"/>
+      <decoder name="vaapi" api="VA-API" codec="VC-1" available_in_ffmpeg="true"/>
+      <decoder name="mjpeg_qsv" api="QSV" codec="JPEG/MJPEG" available_in_ffmpeg="true"/>
+      <decoder name="vaapi" api="VA-API" codec="JPEG/MJPEG" available_in_ffmpeg="true"/>
+    </hw_decoders>
+    <encoding_recommendations>
+      <preset resolution="1280x720" fps="30" codec="H.264/AVC" bitrate="3-5M" encoder="h264_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v h264_vaapi -b:v 4M output.mp4</command>
+      </preset>
+      <preset resolution="1920x1080" fps="30" codec="H.264/AVC" bitrate="5-8M" encoder="h264_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v h264_vaapi -b:v 6M output.mp4</command>
+      </preset>
+      <preset resolution="1920x1080" fps="60" codec="H.264/AVC" bitrate="8-12M" encoder="h264_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v h264_vaapi -b:v 10M output.mp4</command>
+      </preset>
+      <preset resolution="2560x1440" fps="60" codec="H.264/AVC" bitrate="16-24M" encoder="h264_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v h264_vaapi -b:v 20M output.mp4</command>
+      </preset>
+      <preset resolution="3840x2160" fps="30" codec="H.264/AVC" bitrate="25-45M" encoder="h264_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v h264_vaapi -b:v 35M output.mp4</command>
+      </preset>
+      <preset resolution="3840x2160" fps="60" codec="H.264/AVC" bitrate="45-70M" encoder="h264_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v h264_vaapi -b:v 57M output.mp4</command>
+      </preset>
+      <preset resolution="1280x720" fps="30" codec="MPEG-2" bitrate="5-8M" encoder="mpeg2_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v mpeg2_vaapi -b:v 6M output.mp4</command>
+      </preset>
+      <preset resolution="1920x1080" fps="30" codec="MPEG-2" bitrate="8-13M" encoder="mpeg2_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v mpeg2_vaapi -b:v 10M output.mp4</command>
+      </preset>
+      <preset resolution="1920x1080" fps="60" codec="MPEG-2" bitrate="13-19M" encoder="mpeg2_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v mpeg2_vaapi -b:v 16M output.mp4</command>
+      </preset>
+      <preset resolution="2560x1440" fps="60" codec="MPEG-2" bitrate="26-38M" encoder="mpeg2_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v mpeg2_vaapi -b:v 32M output.mp4</command>
+      </preset>
+      <preset resolution="3840x2160" fps="30" codec="MPEG-2" bitrate="40-72M" encoder="mpeg2_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v mpeg2_vaapi -b:v 56M output.mp4</command>
+      </preset>
+      <preset resolution="3840x2160" fps="60" codec="MPEG-2" bitrate="72-112M" encoder="mpeg2_vaapi">
+        <command>ffmpeg -vaapi_device /dev/dri/renderD128 -i input.mp4 -vf 'format=nv12,hwupload' -c:v mpeg2_vaapi -b:v 92M output.mp4</command>
+      </preset>
+    </encoding_recommendations>
+  </gpu>
+  <gpu>
+    <name>GeForce 840M</name>
+    <name_source>pci.ids</name_source>
+    <vendor>NVIDIA</vendor>
+    <vendor_name>NVIDIA Corporation</vendor_name>
+    <pci_device_name>GM108M [GeForce 840M]</pci_device_name>
+    <vendor_id>0x10de</vendor_id>
+    <device_id>0x1341</device_id>
+    <driver>nvidia</driver>
+    <driver_version>580.196.07</driver_version>
+    <driver_version_source>module</driver_version_source>
+    <pci_path>0000:01:00.0</pci_path>
+    <adapter_type>discrete</adapter_type>
+    <integrated supported="false"/>
+    <status>detected</status>
+    <vulkan_device>NVIDIA GeForce 840M</vulkan_device>
+    <render_nodes>
+      <node>/dev/dri/renderD129</node>
+    </render_nodes>
+    <drm_cards>
+      <card>/dev/dri/card0</card>
+    </drm_cards>
+    <interfaces>
+      <interface name="sysfs" key="diag.interface.sysfs" status="available">
+        <detail>PCI display device at 0000:01:00.0</detail>
+      </interface>
+      <interface name="DRM" key="diag.interface.drm" status="available">
+        <detail>/dev/dri/renderD129, /dev/dri/card0</detail>
+      </interface>
+      <interface name="Vulkan" key="diag.interface.vulkan" status="available">
+        <detail>NVIDIA GeForce 840M / NVIDIA 580.196.07; no Vulkan video extensions advertised</detail>
+      </interface>
+      <interface name="VA-API" key="diag.interface.vaapi" status="not-applicable">
+        <detail>VA-API is not used for NVIDIA adapters</detail>
+      </interface>
+      <interface name="nvidia-smi" key="diag.interface.nvidia_smi" status="available">
+        <detail>NVIDIA GeForce 840M, driver 580.196.07</detail>
+      </interface>
+      <interface name="NVENC" key="diag.interface.nvenc" status="unavailable">
+        <detail>nvidia-smi reports Encoder: N/A; NVENC engine unavailable</detail>
+      </interface>
+      <interface name="NVDEC" key="diag.interface.nvdec" status="unavailable">
+        <detail>nvidia-smi reports Decoder: N/A; NVDEC engine unavailable</detail>
+      </interface>
+      <interface name="FFmpeg" key="diag.interface.ffmpeg" status="available">
+        <detail>av1_nvenc, h264_nvenc, hevc_nvenc</detail>
+      </interface>
+    </interfaces>
+    <capabilities>
+      <codec name="H.264/AVC">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>nvidia-smi reports Decoder: N/A (NVDEC engine unavailable); NVIDIA NVDEC capability table (Maxwell 1st generation, GM108)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>nvidia-smi reports Encoder: N/A (NVENC engine unavailable); NVIDIA NVENC capability table (Maxwell 1st generation, GM108)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="HEVC/H.265">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>nvidia-smi reports Decoder: N/A (NVDEC engine unavailable); NVIDIA NVDEC capability table (Maxwell 1st generation, GM108)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>nvidia-smi reports Encoder: N/A (NVENC engine unavailable); NVIDIA NVENC capability table (Maxwell 1st generation, GM108)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="VP8">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>nvidia-smi reports Decoder: N/A (NVDEC engine unavailable); NVIDIA NVDEC capability table (Maxwell 1st generation, GM108)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>nvidia-smi reports Encoder: N/A (NVENC engine unavailable); NVIDIA NVENC capability table (Maxwell 1st generation, GM108)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="VP9">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>nvidia-smi reports Decoder: N/A (NVDEC engine unavailable); NVIDIA NVDEC capability table (Maxwell 1st generation, GM108)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>nvidia-smi reports Encoder: N/A (NVENC engine unavailable); NVIDIA NVENC capability table (Maxwell 1st generation, GM108)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="AV1">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>nvidia-smi reports Decoder: N/A (NVDEC engine unavailable); NVIDIA NVDEC capability table (Maxwell 1st generation, GM108)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>nvidia-smi reports Encoder: N/A (NVENC engine unavailable); NVIDIA NVENC capability table (Maxwell 1st generation, GM108)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="MPEG-2">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>nvidia-smi reports Decoder: N/A (NVDEC engine unavailable); NVIDIA NVDEC capability table (Maxwell 1st generation, GM108)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>nvidia-smi reports Encoder: N/A (NVENC engine unavailable); NVIDIA NVENC capability table (Maxwell 1st generation, GM108)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="VC-1">
+        <decode supported="false"/>
+        <encode supported="false"/>
+        <sources>
+          <decode_sources>
+            <source>nvidia-smi reports Decoder: N/A (NVDEC engine unavailable); NVIDIA NVDEC capability table (Maxwell 1st generation, GM108)</source>
+          </decode_sources>
+          <encode_sources>
+            <source>nvidia-smi reports Encoder: N/A (NVENC engine unavailable); NVIDIA NVENC capability table (Maxwell 1st generation, GM108)</source>
+          </encode_sources>
+        </sources>
+      </codec>
+      <codec name="JPEG/MJPEG">
+        <decode supported="unknown"/>
+        <encode supported="unknown"/>
+      </codec>
+    </capabilities>
+    <hw_encoders/>
+    <hw_decoders/>
+    <encoding_recommendations/>
+  </gpu>
+</gpu_inventory>

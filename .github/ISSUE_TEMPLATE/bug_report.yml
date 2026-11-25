@@ -1,0 +1,67 @@
+name: Сообщение об ошибке
+description: Сообщить о проблеме в GPU Report
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за сообщение. Не публикуйте приватные данные без необходимости.
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия GPU Report
+      placeholder: "gpu-report 1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: distribution
+    attributes:
+      label: Дистрибутив и версия Linux
+      placeholder: "Ubuntu 24.04, Arch Linux, Fedora 42..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: gpu
+    attributes:
+      label: GPU и драйвер
+      description: Приложите вывод gpu-report --list-gpu, если это возможно.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Шаги воспроизведения
+      placeholder: |
+        1. Запустить ...
+        2. Нажать ...
+        3. Получить ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое поведение
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактическое поведение и вывод
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Дополнительная информация
+      description: Логи, скриншоты TUI и XML можно приложить сюда.
